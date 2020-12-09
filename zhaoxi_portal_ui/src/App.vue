@@ -20,24 +20,24 @@
       <div class="lay-head-navi">
         <img src="/imgs/companyInfo/Logo2.png" alt="" />
         <ul>
-          <li>
-            <a href>首页</a>
-            <span class="navi-sel"></span>
+          <li @click="selNo='/'">
+            <router-link to="/">首页</router-link>
+            <span :class="{'navi-sel':selNo=='Home'}"></span>
+          </li>
+          <li @click="selNo='/about'">
+            <router-link to="/about">关于我们</router-link>
+            <span :class="{'navi-sel':selNo=='About'}"></span>
           </li>
           <li>
-            <a href>关于我们</a>
+            <router-link to="/">课程中心</router-link>
             <span></span>
           </li>
           <li>
-            <a href>课程中心</a>
+            <router-link to="/">诚聘英才</router-link>
             <span></span>
           </li>
           <li>
-            <a href>诚聘英才</a>
-            <span></span>
-          </li>
-          <li>
-            <a href>个人中心</a>
+            <router-link to="/">个人中心</router-link>
             <span></span>
           </li>
         </ul>
@@ -102,6 +102,20 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data(){
+    return{
+      selNo:"/"
+    }
+  },
+  mounted(){
+    var {name} = this.$route;
+    this.selNo = name;
+  }
+}
+</script>
 
 <style lang="scss">
 body {
@@ -220,6 +234,7 @@ body {
   top: 36%;
   right: 10px;
   overflow: hidden;
+  z-index: 10;
   .left-pad {
     position: relative;
     right: -170px;

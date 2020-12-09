@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <div class="carousel" style="height:390px;with:100%;background-color:#ccc">
-      <el-carousel indicator-position="outside">
-        <el-carousel-item v-for="item in 4" :key="item">
-        <h3>{{ item }}</h3>
-      </el-carousel-item>
-  </el-carousel>
+    <div class="carousel" style="height:390px;width:100%;background-color:#ccc;overflow:hidden">
+      <el-carousel :interval="5000" arrow="always" height="390px">
+        <el-carousel-item v-for="img in imgs" :key="img">
+          <img :src="img" alt="">
+        </el-carousel-item>
+      </el-carousel>
     </div>
     <div class="home-pad">
       <div class="home-pad-inner">
@@ -110,7 +110,16 @@
 import padTitle from '@/components/PadTitle.vue'
 
 export default {
-  name: "Home",
+  name: "home",
+  data(){
+    return{
+      imgs:[
+        "/imgs/carousel/轮播-1.jpg",
+        "/imgs/carousel/轮播-2-架构班.jpg",
+        "/imgs/carousel/轮播-3-全栈.jpg",
+      ]
+    };
+  },
   components: {
     padTitle
   }
