@@ -20,11 +20,11 @@
       <div class="lay-head-navi">
         <img src="/imgs/companyInfo/Logo2.png" alt="" />
         <ul>
-          <li @click="selNo='/'">
+          <li @click="selNo='Home'">
             <router-link to="/">首页</router-link>
             <span :class="{'navi-sel':selNo=='Home'}"></span>
           </li>
-          <li @click="selNo='/about'">
+          <li @click="selNo='About'">
             <router-link to="/about">关于我们</router-link>
             <span :class="{'navi-sel':selNo=='About'}"></span>
           </li>
@@ -214,7 +214,7 @@ body {
         background-color: orange;
         display: block;
         position: absolute;
-        transition: 600ms;
+        transition: 300ms;
         left: 50%;
       }
     }
