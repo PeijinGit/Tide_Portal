@@ -83,16 +83,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-// .about-inner {
-//     width: 1200px;
-//     margin: auto;
-//     overflow: hidden;
-// }
-// .top-banner {
-//   background-repeat: no-repeat;
-//   width: 100%;
-//   margin-top: 10px;
-// }
+
 .about-us {
   background-color: #fff;
   padding-top: 20px;
