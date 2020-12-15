@@ -32,9 +32,9 @@
             <router-link to="/">课程中心</router-link>
             <span></span>
           </li>
-          <li>
-            <router-link to="/">诚聘英才</router-link>
-            <span></span>
+          <li @click="selNo='Recruit'">
+            <router-link to="/recruit">诚聘英才</router-link>
+            <span :class="{'navi-sel':selNo=='Recruit'}"></span>
           </li>
           <li>
             <router-link to="/">个人中心</router-link>
