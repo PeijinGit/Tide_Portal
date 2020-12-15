@@ -106,8 +106,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import padTitle from '@/components/PadTitle.vue'
+// // @ is an alias to /src
+// import padTitle from '@/components/PadTitle.vue'
 
 export default {
   name: "home",
@@ -120,9 +120,9 @@ export default {
       ]
     };
   },
-  components: {
-    padTitle
-  }
+  // components: {
+  //   padTitle
+  // }
 };
 </script>
 <style lang="scss" scoped>
