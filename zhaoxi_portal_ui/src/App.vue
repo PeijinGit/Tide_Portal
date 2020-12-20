@@ -36,9 +36,9 @@
             <router-link to="/recruit">诚聘英才</router-link>
             <span :class="{'navi-sel':selNo=='Recruit'}"></span>
           </li>
-          <li>
-            <router-link to="/">个人中心</router-link>
-            <span></span>
+          <li @click="selNo='Person'">
+            <router-link to="/person">个人中心</router-link>
+            <span :class="{'navi-sel':selNo=='Person'}"></span>
           </li>
         </ul>
       </div>
