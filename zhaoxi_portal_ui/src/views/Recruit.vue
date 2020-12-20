@@ -113,7 +113,6 @@ export default {
   .img-even {
     float: right;;
     margin-right: 125px;
-    //padding-right: 80px;
   }
   .img-even { 
     float: right;
@@ -124,7 +123,6 @@ export default {
       font-weight: bold;
       margin-top: 10px;
       margin-bottom: 10px;
-      // padding-top: 10px;
     }
     .r-text {
       font-size: 12px;
