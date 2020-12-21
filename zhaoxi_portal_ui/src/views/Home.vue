@@ -9,8 +9,7 @@
     </div>
     <div class="home-pad">
       <div class="home-pad-inner">
-        <padTitle mTitle= "朝夕名师 <span style='color:#eb7c06'>在线直播</span>" sTitle="直播互动学习，感受技术韵律"/>
-        
+        <padTitle mTitle= "朝夕名师 <span style='color:#eb7c06'>在线直播</span>" sTitle="直播互动学习，感受技术韵律"/>       
         <div class="public-course">
           <ul>
             <li v-for="item in publicCourses" :key="item.text">
@@ -18,8 +17,7 @@
                 <img :src="item.img" alt />
                 <p>{{item.text}}</p>
               </a>
-          </li>
-          
+          </li>         
           </ul>
         </div>
         <padTitle mTitle= "朝夕6大<span style='color:#eb7c06'>贴心服务</span>" sTitle="学伴式专属服务，打造IT精英圈层"/>       
@@ -29,40 +27,13 @@
         <padTitle mTitle= "加入<span style='color:#eb7c06'>朝夕</span>" sTitle="让每个人的职业生涯不留遗憾"/> 
         <div class="join-us">
           <ul>
-            <li>
+            <li v-for="item in recruitSmall" :key="item.id">
               <a href="">
                 <div>
-                  <img src="/imgs/recruit/1_s.png" alt="">
+                  <img :src="item.img" alt="">
                 </div>
-                <p class="recruit-title">讲师招聘</p>
-                <p class="recruit-text">Software Development. Talk to us today about how we can help solve your IT security</p>
-              </a>
-            </li> 
-            <li>
-              <a href="">
-                <div>
-                  <img src="/imgs/recruit/1_s.png" alt="">
-                </div>
-                <p class="recruit-title">讲师招聘</p>
-                <p class="recruit-text">高新招聘全职/兼职讲师，6年以上.NET、前端、Java、Python开发经验，有大厂经验更加分，对标一线架构收入</p>
-              </a>
-            </li> 
-            <li>
-              <a href="">
-                <div>
-                  <img src="/imgs/recruit/1_s.png" alt="">
-                </div>
-                <p class="recruit-title">讲师招聘</p>
-                <p class="recruit-text">高新招聘全职/兼职讲师，6年以上.NET、前端、Java、Python开发经验，有大厂经验更加分，对标一线架构收入</p>
-              </a>
-            </li> 
-            <li>
-              <a href="">
-                <div>
-                  <img src="/imgs/recruit/1_s.png" alt="">
-                </div>
-                <p class="recruit-title">讲师招聘</p>
-                <p class="recruit-text">高新招聘全职/兼职讲师，6年以上.NET、前端、Java、Python开发经验，有大厂经验更加分，对标一线架构收入</p>
+                <p class="recruit-title">{{item.title}}</p>
+                <p class="recruit-text">{{item.text}}</p>
               </a>
             </li>  
           </ul>  
@@ -70,9 +41,9 @@
         <padTitle mTitle= "合作<span style='color:#eb7c06'>伙伴</span>" sTitle="人生道路伙伴不可或缺"/> 
         <div class="buddy-list">
           <ul>
-            <li>
+            <li v-for="item in buddy" :key="item.img">
               <a href="">
-                <img src="/imgs/buddy/3.png" alt="">
+                <img :src="item.img" alt="">
               </a>
             </li>
           </ul>
@@ -92,14 +63,16 @@ export default {
     return{
       Carousels:[],
       publicCourses:[],
-
+      recruitSmall:[],
+      buddy:[],
     };
   },
   mounted() {
     that = this;
     this.getCarousel();
     this.getPublicCourses();
-    
+    this.getRecruitSmall();
+    this.getBuddy();
   },
   methods:{
     getCarousel() {
@@ -112,7 +85,16 @@ export default {
         that.publicCourses = resData;
       });
     },
-    
+    getRecruitSmall(){
+      this.$getJsonResAsync("recruitSmall", resData => {
+        that.recruitSmall = resData;
+      });
+    },
+    getBuddy(){
+      this.$getJsonResAsync("buddy", resData => {
+        that.buddy = resData;
+      });
+    }
   }
 };
 </script>

@@ -11,50 +11,20 @@
       <div class="about-inner">
         <inner>
           <img src="/imgs/others/aboutTextImage.jpg" alt="" />
-          <div class="about-detail-content">
+          <div class="about-detail-content" >
             <p>
               <b
-                >朝夕教育科技有限公司成立于2019年。总部位于武汉市洪山区书城路46号金地格林商业一单元。</b
+                >{{about.introduce}}</b
               >
-              <br />朝夕教育，专注于IT在线教育，注重服务与口碑，解决升职与加薪的难题。当下专注于.Net领域在线教育，开设有.Net架构班、.Net高级进阶班、.Net全栈实战班、Sql+Winform零基础快速就业班，C#+AutoCAD高薪就业班，致力于打造高品质在线教育，赋能IT人，赋能企业！升职加薪，只争朝夕！
+              <br />{{about.detail}}
             </p>
             <ul>
-              <li>
-                <span>名师授课</span>
+              <li v-for="item in about.services" :key="item.title">
+                <span>{{item.title}}</span>
                 <p>
-                  朝夕教育首创.NET架构师课程系统深入讲解原理与设计,实时在线解决学员问题
+                  {{item.text}}
                 </p>
-              </li>
-              <li>
-                <span>名师授课</span>
-                <p>
-                  朝夕教育首创.NET架构师课程系统深入讲解原理与设计,实时在线解决学员问题
-                </p>
-              </li>
-              <li>
-                <span>名师授课</span>
-                <p>
-                  朝夕教育首创.NET架构师课程系统深入讲解原理与设计,实时在线解决学员问题
-                </p>
-              </li>
-              <li>
-                <span>名师授课</span>
-                <p>
-                  朝夕教育首创.NET架构师课程系统深入讲解原理与设计,实时在线解决学员问题
-                </p>
-              </li>
-              <li>
-                <span>名师授课</span>
-                <p>
-                  朝夕教育首创.NET架构师课程系统深入讲解原理与设计,实时在线解决学员问题
-                </p>
-              </li>
-              <li>
-                <span>名师授课</span>
-                <p>
-                  朝夕教育首创.NET架构师课程系统深入讲解原理与设计,实时在线解决学员问题
-                </p>
-              </li>
+              </li>      
             </ul>
           </div>
         </inner>
@@ -79,7 +49,22 @@
 </template>
 
 <script>
-export default {};
+
+export default { 
+  data() {
+    return {
+      about:{}
+    }
+  },
+  mounted(){
+    this.getAbout();
+  },
+  methods:{
+    getAbout(){
+      this.$getJsonResAsync("about", resData => {this.about = resData;})
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

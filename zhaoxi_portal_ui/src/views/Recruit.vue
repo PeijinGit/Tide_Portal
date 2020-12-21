@@ -7,31 +7,20 @@
         mTitle="誠聘<span style='color:#eb7c06'>英才</span>"
         sTitle="广阔舞台,任你飞翔"
       />
-      <div class="recruit-item">
-        <img src="/imgs/recruit/join1.jpg" class="img-odd" alt="" />
+      <div class="recruit-item" v-for="(item,index) in recruitBig" :key="item.id">
+        <img src="/imgs/recruit/join1.jpg" :class="isOdd(index)?'img-odd':'img-even'"  alt="" />
         <div class="join-text">
-          <p class="r-title">朝夕助教招募</p>
-          <p class="r-text">升职加薪，只争朝夕，为学员，也为自己</p>
+          <p class="r-title">{{item.title}}</p>
+          <p class="r-text">{{item.text}}</p>
           <ul>
-            <li>
-              <p>朝夕讲师招募</p>
+            
+            <li v-for="itemIn in item.items" :key="itemIn.itemTitle">
+              <p>{{itemIn.itemTitle}}</p>
               <ul>
-                <li>
-                  如果你热爱分享，如果你梦想成为老师，加入朝夕教育，践行梦想发挥价值！
-                </li>
+                <li v-for="itemInIn in itemIn.itemContents" :key="itemInIn.contetn">{{itemInIn.content}}</li>
               </ul>
             </li>
-            <li>
-              <p>你能得到什么</p>
-              <ul>
-                <li>高额课酬：拥有高额的课酬费和营销提成，梦想和现实兼顾！</li>
-                <li>
-                  个人品牌：几十万学员粉丝资源，全方位为讲师推广快速打响知名度。
-                </li>
-                <li>事业成就：不仅是工作，每一位核心讲师都能成为公司股东！</li>
-              </ul>
-            </li>
-            <li>
+            <!-- <li>
               <p>我们的优势</p>
               <ul>
                 <li>
@@ -42,7 +31,7 @@
                   口碑形象：优异的服务，过硬的质量，良好的口碑，朝夕老师备受尊敬！
                 </li>
               </ul>
-            </li>
+            </li> -->
           </ul>
           <p class="r-noti">
             虚位以待，请邮箱联系：
@@ -50,7 +39,7 @@
           </p>
         </div> 
       </div>
-      <div class="recruit-item">
+      <!-- <div class="recruit-item">
         <img src="/imgs/recruit/join1.jpg" class="img-even" alt="" />
         <div class="join-text">
           <p class="r-title">朝夕助教招募</p>
@@ -92,13 +81,29 @@
             <span style="color: #eb7c06">hr@ZhaoxiEdu.Net</span>
           </p>
         </div> 
-      </div>
+      </div> -->
     </inner>
   </div>
 </template>
 <script>
 export default {
   name: "",
+  data(){
+    return {
+      recruitBig:[],
+    }
+  },
+  mounted(){
+    this.getRecruitBig();
+  },
+  methods:{
+    getRecruitBig(){
+      this.$getJsonResAsync("recruitBig",resData=>this.recruitBig = resData)
+    },
+    isOdd(index){
+      return index%2==0;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
