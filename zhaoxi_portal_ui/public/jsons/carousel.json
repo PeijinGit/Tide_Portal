@@ -1,0 +1,26 @@
+[
+    {
+        "url":"https://zhaoxi.ke.qq.com/?tuin=a7bd6928#tab=1&category=-1",
+        "img": "/imgs/carousel/轮播-1.jpg"
+    },
+    {
+        "url": "https://ke.qq.com/course/456926",
+        "img": "/imgs/carousel/轮播-2-架构班.jpg"
+    },
+    {
+        "url": "https://ke.qq.com/course/464059",
+        "img": "/imgs/carousel/轮播-3-全栈.jpg"
+    },
+    {
+        "url": "https://ke.qq.com/course/453949",
+        "img": "/imgs/carousel/轮播-4-高级进阶.jpg"
+    },
+    {
+        "url": "https://ke.qq.com/course/462094",
+        "img": "/imgs/carousel/轮播-6-AutoCAD.jpg"
+    },
+    {
+        "url": "https://ke.qq.com/course/464930",
+        "img": "/imgs/carousel/轮播-5-winform.jpg"
+    }
+]

@@ -2,8 +2,8 @@
   <div class="home">
     <div class="carousel" style="height:390px;width:100%;background-color:#ccc;overflow:hidden">
       <el-carousel :interval="5000" arrow="always" height="390px">
-        <el-carousel-item v-for="img in imgs" :key="img">
-          <img :src="img" alt="">
+        <el-carousel-item v-for="item in Carousels" :key="item.url">
+          <img :src="item.img" alt="">
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -13,36 +13,13 @@
         
         <div class="public-course">
           <ul>
-            <li>
-            <a href="https://ke.qq.com/course/462921?taid=4259151564181577" target="_blank">
-                <img src="/imgs/public/全栈体验课.jpg" alt />
-                <p>全站开发，一站到底</p>
+            <li v-for="item in publicCourses" :key="item.text">
+            <a :href="item.url" target="_blank">
+                <img :src="item.img" alt />
+                <p>{{item.text}}</p>
               </a>
           </li>
-          <li>
-            <a href="https://ke.qq.com/course/462921?taid=4259151564181577" target="_blank">
-                <img src="/imgs/public/全栈体验课.jpg" alt />
-                <p>全站开发，一站到底</p>
-              </a>
-          </li>
-          <li>
-            <a href="https://ke.qq.com/course/462921?taid=4259151564181577" target="_blank">
-                <img src="/imgs/public/全栈体验课.jpg" alt />
-                <p>全站开发，一站到底</p>
-              </a>
-          </li>
-          <li>
-            <a href="https://ke.qq.com/course/462921?taid=4259151564181577" target="_blank">
-                <img src="/imgs/public/全栈体验课.jpg" alt />
-                <p>全站开发，一站到底</p>
-              </a>
-          </li>
-          <li>
-            <a href="https://ke.qq.com/course/462921?taid=4259151564181577" target="_blank">
-                <img src="/imgs/public/全栈体验课.jpg" alt />
-                <p>全站开发，一站到底</p>
-              </a>
-          </li>
+          
           </ul>
         </div>
         <padTitle mTitle= "朝夕6大<span style='color:#eb7c06'>贴心服务</span>" sTitle="学伴式专属服务，打造IT精英圈层"/>       
@@ -108,21 +85,35 @@
 <script>
 // // @ is an alias to /src
 // import padTitle from '@/components/PadTitle.vue'
-
+var that;
 export default {
   name: "home",
   data(){
     return{
-      imgs:[
-        "/imgs/carousel/轮播-1.jpg",
-        "/imgs/carousel/轮播-2-架构班.jpg",
-        "/imgs/carousel/轮播-3-全栈.jpg",
-      ]
+      Carousels:[],
+      publicCourses:[],
+
     };
   },
-  // components: {
-  //   padTitle
-  // }
+  mounted() {
+    that = this;
+    this.getCarousel();
+    this.getPublicCourses();
+    
+  },
+  methods:{
+    getCarousel() {
+     this.$getJsonResAsync("carousel", resData => {
+        this.Carousels = resData;
+      });
+    },
+    getPublicCourses() {
+      this.$getJsonResAsync("public", resData => {
+        that.publicCourses = resData;
+      });
+    },
+    
+  }
 };
 </script>
 <style lang="scss" scoped>
