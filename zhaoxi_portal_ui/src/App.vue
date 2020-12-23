@@ -10,8 +10,8 @@
             <span>咨询微信：zhaoxi111</span>
           </div>
           <div class="lay-head-top-right">
-            <span class="user-login">注册</span>
-            <span class="user-login">登录</span>
+            <span class="user-login" @click="showRegisterPad('registerPad')">Register</span>
+            <span class="user-login" @click="showLoginPad('loginPad')">登录</span>
             <span class="user-login">用户:</span>
             <span class="user-logout">退出</span>
           </div>
@@ -100,10 +100,15 @@
         </div>
       </div>
     </div>
+    <loginPad id="loginPad" style="display:none"/>
+    <registerPad id="registerPad" style="display:none"/>
   </div>
 </template>
 
 <script>
+import loginPad from "./components/LoginPad.vue";
+import registerPad from "./components/RegisterPad.vue";
+
 export default {
   data(){
     return{
@@ -113,7 +118,38 @@ export default {
   mounted(){
     var {name} = this.$route;
     this.selNo = name;
+  },
+  methods:{
+    showLoginPad(el){
+      layer.open({
+        type:1,
+        title:"登录",
+        shadeClose:true,
+        closeBtn:1,//0代表不显示关闭按钮
+        shade:0.3,
+        skin:"layui-layer-rim", //加上边框
+        area: ["398px", "352px"],
+        content:$("#"+el)
+      })
+    },
+    showRegisterPad(el){
+       layer.open({
+        type:1,
+        title:"注册",
+        shadeClose:true,
+        closeBtn:1,//0代表不显示关闭按钮
+        shade:0.3,
+        skin:"layui-layer-rim", //加上边框
+        area: ["528px", "618px"],
+        content:$("#"+el)
+      })
+    },
+  },
+  components:{
+    loginPad,
+    registerPad
   }
+
 }
 </script>
 
