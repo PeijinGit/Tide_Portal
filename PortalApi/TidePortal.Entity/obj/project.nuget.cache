@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "A/Qw4BW40FTmsGNvixdqHUzP3UHpsF1L+eCnSMevm0smP7LByYPOlbOrAAwkoMjPjdF51G/jbxl1NBRb9iDgSQ==",
+  "success": true,
+  "projectFilePath": "D:\\VSProgram\\TidePortal\\TidePortal.Entity\\TidePortal.Entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\77391\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\77391\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
