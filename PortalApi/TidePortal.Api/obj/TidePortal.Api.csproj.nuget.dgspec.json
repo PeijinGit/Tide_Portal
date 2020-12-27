@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VSProgram\\TidePortal\\TidePortal.Api\\TidePortal.Api.csproj": {}
+    "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\TidePortal.Api.csproj": {}
   },
   "projects": {
-    "D:\\VSProgram\\TidePortal\\TidePortal.Api\\TidePortal.Api.csproj": {
+    "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\TidePortal.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSProgram\\TidePortal\\TidePortal.Api\\TidePortal.Api.csproj",
+        "projectUniqueName": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\TidePortal.Api.csproj",
         "projectName": "TidePortal.Api",
-        "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Api\\TidePortal.Api.csproj",
+        "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\TidePortal.Api.csproj",
         "packagesPath": "C:\\Users\\77391\\.nuget\\packages\\",
-        "outputPath": "D:\\VSProgram\\TidePortal\\TidePortal.Api\\obj\\",
+        "outputPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,11 +32,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\VSProgram\\TidePortal\\TidePortal.Common\\TidePortal.Common.csproj": {
-                "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Common\\TidePortal.Common.csproj"
+              "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj": {
+                "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj"
               },
-              "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj": {
-                "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj"
+              "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj": {
+                "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj"
               }
             }
           }
@@ -59,10 +59,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
-            },
-            "QrCode.Net": {
-              "target": "Package",
-              "version": "[0.4.0, )"
             },
             "System.Drawing.Common": {
               "target": "Package",
@@ -91,14 +87,14 @@
         }
       }
     },
-    "D:\\VSProgram\\TidePortal\\TidePortal.Common\\TidePortal.Common.csproj": {
+    "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSProgram\\TidePortal\\TidePortal.Common\\TidePortal.Common.csproj",
+        "projectUniqueName": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj",
         "projectName": "TidePortal.Common",
-        "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Common\\TidePortal.Common.csproj",
+        "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj",
         "packagesPath": "C:\\Users\\77391\\.nuget\\packages\\",
-        "outputPath": "D:\\VSProgram\\TidePortal\\TidePortal.Common\\obj\\",
+        "outputPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -143,6 +139,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -159,14 +159,14 @@
         }
       }
     },
-    "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj": {
+    "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj",
+        "projectUniqueName": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj",
         "projectName": "TidePortal.Core",
-        "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj",
+        "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj",
         "packagesPath": "C:\\Users\\77391\\.nuget\\packages\\",
-        "outputPath": "D:\\VSProgram\\TidePortal\\TidePortal.Core\\obj\\",
+        "outputPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -187,8 +187,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\VSProgram\\TidePortal\\TidePortal.Entity\\TidePortal.Entity.csproj": {
-                "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Entity\\TidePortal.Entity.csproj"
+              "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Entity\\TidePortal.Entity.csproj": {
+                "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Entity\\TidePortal.Entity.csproj"
               }
             }
           }
@@ -233,14 +233,14 @@
         }
       }
     },
-    "D:\\VSProgram\\TidePortal\\TidePortal.Entity\\TidePortal.Entity.csproj": {
+    "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Entity\\TidePortal.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VSProgram\\TidePortal\\TidePortal.Entity\\TidePortal.Entity.csproj",
+        "projectUniqueName": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Entity\\TidePortal.Entity.csproj",
         "projectName": "TidePortal.Entity",
-        "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Entity\\TidePortal.Entity.csproj",
+        "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Entity\\TidePortal.Entity.csproj",
         "packagesPath": "C:\\Users\\77391\\.nuget\\packages\\",
-        "outputPath": "D:\\VSProgram\\TidePortal\\TidePortal.Entity\\obj\\",
+        "outputPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

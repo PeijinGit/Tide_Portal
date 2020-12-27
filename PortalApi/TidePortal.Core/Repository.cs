@@ -18,32 +18,38 @@ namespace TidePortal.Core
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var res = _context.Set<TEntity>().FirstOrDefault(m => m.Id == id);
+            _context.Set<TEntity>().Remove(res);
+            _context.SaveChanges();
         }
 
         public int Insert(TEntity entity)
         {
-            throw new NotImplementedException();
+            var res = _context.Set<TEntity>().Add(entity);
+            _context.SaveChanges();
+            return res.Entity.Id;
         }
 
         public IQueryable<TEntity> ListAll()
         {
-            throw new NotImplementedException();
+            return _context.Set<TEntity>();
         }
 
         public IQueryable<TEntity> ListByCustom(Expression<Func<TEntity, bool>> filter)
         {
-            throw new NotImplementedException();
+            return _context.Set<TEntity>().Where(filter);
         }
 
         public IQueryable<TEntity> ListById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Set<TEntity>().Where(m => m.Id == id);
         }
 
         public int Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            var res = _context.Set<TEntity>().Update(entity);
+            _context.SaveChanges();
+            return res.Entity.Id;
         }
     }
 }

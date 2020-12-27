@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TidePortal.Common\TidePortal.Common.csproj" />
+    <ProjectReference Include="..\TidePortal.Core\TidePortal.Core.csproj" />
+    <ProjectReference Include="..\TidePortal.Entity\TidePortal.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

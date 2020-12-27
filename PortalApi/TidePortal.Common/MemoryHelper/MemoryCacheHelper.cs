@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using System;
 
-namespace TidePortal.Common
+namespace TidePortal.Common.MemoryHelper
 {
     public class MemoryCacheHelper
     {

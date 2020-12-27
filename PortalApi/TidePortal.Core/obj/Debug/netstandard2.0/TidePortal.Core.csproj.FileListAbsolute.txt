@@ -10,3 +10,15 @@ D:\VSProgram\TidePortal\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core
 D:\VSProgram\TidePortal\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.csproj.CopyComplete
 D:\VSProgram\TidePortal\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.dll
 D:\VSProgram\TidePortal\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.pdb
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\bin\Debug\netstandard2.0\TidePortal.Core.deps.json
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\bin\Debug\netstandard2.0\TidePortal.Core.dll
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\bin\Debug\netstandard2.0\TidePortal.Core.pdb
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\bin\Debug\netstandard2.0\TidePortal.Entity.dll
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\bin\Debug\netstandard2.0\TidePortal.Entity.pdb
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.csprojAssemblyReference.cache
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.csproj.CoreCompileInputs.cache
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.AssemblyInfoInputs.cache
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.AssemblyInfo.cs
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.csproj.CopyComplete
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.dll
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Core\obj\Debug\netstandard2.0\TidePortal.Core.pdb

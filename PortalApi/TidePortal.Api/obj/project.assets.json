@@ -832,15 +832,6 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
-      "QrCode.Net/0.4.0": {
-        "type": "package",
-        "compile": {
-          "lib/net45/Gma.QrCodeNet.Encoding.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Gma.QrCodeNet.Encoding.dll": {}
-        }
-      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2565,7 +2556,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Extensions.Caching.Abstractions": "5.0.0",
-          "Microsoft.Extensions.Caching.Memory": "5.0.0"
+          "Microsoft.Extensions.Caching.Memory": "5.0.0",
+          "System.Drawing.Common": "5.0.0"
         },
         "compile": {
           "bin/placeholder/TidePortal.Common.dll": {}
@@ -3979,35 +3971,6 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
-      ]
-    },
-    "QrCode.Net/0.4.0": {
-      "sha512": "/IGAS08L3o0GYsVU1VQnE23w00EVaQ1GP5cS2uEfGsiszZ2X6AnbHImwXL1XPM0opT0GOVgbX4Bhp/7eB22Ugg==",
-      "type": "package",
-      "path": "qrcode.net/0.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "NuGet.exe",
-        "lib/net35/Gma.QrCodeNet.Encoding.dll",
-        "lib/net35/Gma.QrCodeNet.Encoding.pdb",
-        "lib/net35/Gma.QrCodeNet.Encoding.xml",
-        "lib/net40/Gma.QrCodeNet.Encoding.XML",
-        "lib/net40/Gma.QrCodeNet.Encoding.dll",
-        "lib/net40/Gma.QrCodeNet.Encoding.pdb",
-        "lib/net45/Gma.QrCodeNet.Encoding.dll",
-        "lib/net45/Gma.QrCodeNet.Encoding.pdb",
-        "lib/net45/Gma.QrCodeNet.Encoding.xml",
-        "lib/netcore45/Gma.QrCodeNet.Encoding.dll",
-        "lib/netcore45/Gma.QrCodeNet.Encoding.pdb",
-        "lib/netcore45/Gma.QrCodeNet.Encoding.pri",
-        "lib/netcore45/Gma.QrCodeNet.Encoding.xml",
-        "lib/netcore45/Themes/Generic.xaml",
-        "lib/sl5/Gma.QrCodeNet.Encoding.dll",
-        "lib/sl5/Gma.QrCodeNet.Encoding.pdb",
-        "lib/sl5/Gma.QrCodeNet.Encoding.xml",
-        "qrcode.net.0.4.0.nupkg.sha512",
-        "qrcode.net.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8471,7 +8434,6 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
-      "QrCode.Net >= 0.4.0",
       "System.Drawing.Common >= 5.0.0",
       "TidePortal.Common >= 1.0.0",
       "TidePortal.Core >= 1.0.0"
@@ -8485,11 +8447,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VSProgram\\TidePortal\\TidePortal.Api\\TidePortal.Api.csproj",
+      "projectUniqueName": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\TidePortal.Api.csproj",
       "projectName": "TidePortal.Api",
-      "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Api\\TidePortal.Api.csproj",
+      "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\TidePortal.Api.csproj",
       "packagesPath": "C:\\Users\\77391\\.nuget\\packages\\",
-      "outputPath": "D:\\VSProgram\\TidePortal\\TidePortal.Api\\obj\\",
+      "outputPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -8510,11 +8472,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\VSProgram\\TidePortal\\TidePortal.Common\\TidePortal.Common.csproj": {
-              "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Common\\TidePortal.Common.csproj"
+            "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj": {
+              "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj"
             },
-            "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj": {
-              "projectPath": "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj"
+            "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj": {
+              "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj"
             }
           }
         }
@@ -8537,10 +8499,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.4, )"
-          },
-          "QrCode.Net": {
-            "target": "Package",
-            "version": "[0.4.0, )"
           },
           "System.Drawing.Common": {
             "target": "Package",
@@ -8568,17 +8526,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'QrCode.Net 0.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "QrCode.Net",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }

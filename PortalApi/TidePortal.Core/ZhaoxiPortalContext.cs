@@ -27,6 +27,8 @@ namespace TidePortal.Core
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-FG071FQ;Initial Catalog=TidePortal;Integrated Security=True");
             }
         }
+
+        //这些都是额外的似乎都不需要
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Users>(entity =>

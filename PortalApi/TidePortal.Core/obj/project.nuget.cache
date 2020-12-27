@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YxmHj5b1Rk7fHZoRmMOURph4RfekH5zJ/708jd318D86dzZo61Ce2Ec/EPsW0dFXglXFQyCVvEDEf8Dj8xcZJw==",
+  "dgSpecHash": "QJRP+qPj0wDA1NnQKYWnDAMTYry+3QbzjFnDFjgS5kJ4rFacbKmzxHg0Q0JxGns9ExNHl24ftn64XFrfRyH/Yw==",
   "success": true,
-  "projectFilePath": "D:\\VSProgram\\TidePortal\\TidePortal.Core\\TidePortal.Core.csproj",
+  "projectFilePath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\77391\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\77391\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

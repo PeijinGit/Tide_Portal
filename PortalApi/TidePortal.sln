@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TidePortal.Api", "TidePorta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TidePortal.Common", "TidePortal.Common\TidePortal.Common.csproj", "{ADF64550-BCE7-4750-BF20-03BAB9A334C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidePortal.Core", "TidePortal.Core\TidePortal.Core.csproj", "{5186DB81-4640-4690-B4F6-DC8C296373D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TidePortal.Core", "TidePortal.Core\TidePortal.Core.csproj", "{5186DB81-4640-4690-B4F6-DC8C296373D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidePortal.Entity", "TidePortal.Entity\TidePortal.Entity.csproj", "{8668CA86-735A-4431-A6D4-0E34A75DB76A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TidePortal.Entity", "TidePortal.Entity\TidePortal.Entity.csproj", "{8668CA86-735A-4431-A6D4-0E34A75DB76A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidePortal.Service", "TidePortal.Service\TidePortal.Service.csproj", "{40E1255D-DB54-48CC-A33B-224E8AD93DB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8668CA86-735A-4431-A6D4-0E34A75DB76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8668CA86-735A-4431-A6D4-0E34A75DB76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8668CA86-735A-4431-A6D4-0E34A75DB76A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E1255D-DB54-48CC-A33B-224E8AD93DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E1255D-DB54-48CC-A33B-224E8AD93DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E1255D-DB54-48CC-A33B-224E8AD93DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E1255D-DB54-48CC-A33B-224E8AD93DB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
