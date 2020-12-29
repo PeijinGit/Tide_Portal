@@ -5,13 +5,34 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TidePortal.Common.MemoryHelper;
 using TidePortal.Common.ValidateCode;
+using TidePortal.Service;
 
 namespace TidePortal.Api.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    public class LoginController : ControllerBase
+    public class LoginController : BaseController
     {
+        public LoginController(IAccountService accountService) : base(accountService)
+        {
+        }
+
+        public string CheckLogin(string qq, string pwd, string validateString)
+        {
+            string ip = HttpContext.Connection.RemoteIpAddress.ToString();
+            //MemoryCacheHelper.SetCache(ip, "test");
+            string validate = MemoryCacheHelper.GetCache(ip).ToString();
+            if (validate != null && validateString.ToLower() == validate.ToLower())
+            {
+                return CheckStatus(qq, pwd);
+            }
+            else
+            {
+                HttpContext.Response.StatusCode = 214;
+                return "验证码错误";
+            }
+        }
+
         public IActionResult GetValidateCode()
         {
             string validateString = ValidateCodeHelper.CreateVaildateString(4);

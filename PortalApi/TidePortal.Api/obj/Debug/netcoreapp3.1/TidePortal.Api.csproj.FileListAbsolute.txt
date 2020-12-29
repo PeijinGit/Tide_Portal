@@ -183,7 +183,6 @@ D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\Microsof
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
-D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\Gma.QrCodeNet.Encoding.dll
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
@@ -276,3 +275,5 @@ D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\obj\Debug\netcoreapp3.1\staticwe
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\obj\Debug\netcoreapp3.1\TidePortal.Api.dll
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\obj\Debug\netcoreapp3.1\TidePortal.Api.pdb
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\obj\Debug\netcoreapp3.1\TidePortal.Api.genruntimeconfig.cache
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\TidePortal.Service.dll
+D:\VSProgram\ProtalApi\PortalApi\TidePortal.Api\bin\Debug\netcoreapp3.1\TidePortal.Service.pdb

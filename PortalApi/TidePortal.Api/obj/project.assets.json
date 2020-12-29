@@ -2589,6 +2589,21 @@
         "runtime": {
           "bin/placeholder/TidePortal.Entity.dll": {}
         }
+      },
+      "TidePortal.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "TidePortal.Common": "1.0.0",
+          "TidePortal.Core": "1.0.0",
+          "TidePortal.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TidePortal.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TidePortal.Service.dll": {}
+        }
       }
     }
   },
@@ -8428,6 +8443,11 @@
       "type": "project",
       "path": "../TidePortal.Entity/TidePortal.Entity.csproj",
       "msbuildProject": "../TidePortal.Entity/TidePortal.Entity.csproj"
+    },
+    "TidePortal.Service/1.0.0": {
+      "type": "project",
+      "path": "../TidePortal.Service/TidePortal.Service.csproj",
+      "msbuildProject": "../TidePortal.Service/TidePortal.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8436,7 +8456,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
       "System.Drawing.Common >= 5.0.0",
       "TidePortal.Common >= 1.0.0",
-      "TidePortal.Core >= 1.0.0"
+      "TidePortal.Core >= 1.0.0",
+      "TidePortal.Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8477,6 +8498,9 @@
             },
             "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj": {
               "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Core\\TidePortal.Core.csproj"
+            },
+            "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Service\\TidePortal.Service.csproj": {
+              "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Service\\TidePortal.Service.csproj"
             }
           }
         }

@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TidePortal.Common\TidePortal.Common.csproj" />
     <ProjectReference Include="..\TidePortal.Core\TidePortal.Core.csproj" />
+    <ProjectReference Include="..\TidePortal.Service\TidePortal.Service.csproj" />
   </ItemGroup>
 
 
