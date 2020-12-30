@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FTp33Cz8GoMO0y3EHzd51Uzd1lJL+9svfEC/nH58q6L3VtmVBz/JP1bcSI3Vwzhyc/fQiZiIw7RKv1kfu23k2A==",
+  "dgSpecHash": "YzS54+9iUREMYyK8XIgOl57F7d3KEDml+Vq0xsHOxT2NHCM+9TKZxXCFBFZ5Dy9YBokQ0hqMlESLfY7Fxi7R4Q==",
   "success": true,
   "projectFilePath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Api\\TidePortal.Api.csproj",
   "expectedPackageFiles": [
@@ -51,7 +51,7 @@
     "C:\\Users\\77391\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\77391\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\77391\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\77391\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\77391\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\77391\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\77391\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\77391\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

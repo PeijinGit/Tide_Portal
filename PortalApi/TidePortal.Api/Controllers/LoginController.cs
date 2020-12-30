@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using TidePortal.Common.MemoryHelper;
 using TidePortal.Common.ValidateCode;
 using TidePortal.Service;
@@ -13,7 +14,7 @@ namespace TidePortal.Api.Controllers
     [ApiController]
     public class LoginController : BaseController
     {
-        public LoginController(IAccountService accountService) : base(accountService)
+        public LoginController(IAccountService accountService, IConfiguration configuration) : base(accountService, configuration)
         {
         }
 
