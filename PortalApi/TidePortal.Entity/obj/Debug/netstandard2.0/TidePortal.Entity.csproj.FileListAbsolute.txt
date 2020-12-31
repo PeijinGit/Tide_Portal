@@ -10,7 +10,6 @@ D:\VSProgram\TidePortal\TidePortal.Entity\obj\Debug\netstandard2.0\TidePortal.En
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Entity\bin\Debug\netstandard2.0\TidePortal.Entity.deps.json
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Entity\bin\Debug\netstandard2.0\TidePortal.Entity.dll
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Entity\bin\Debug\netstandard2.0\TidePortal.Entity.pdb
-D:\VSProgram\ProtalApi\PortalApi\TidePortal.Entity\obj\Debug\netstandard2.0\TidePortal.Entity.csprojAssemblyReference.cache
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Entity\obj\Debug\netstandard2.0\TidePortal.Entity.csproj.CoreCompileInputs.cache
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Entity\obj\Debug\netstandard2.0\TidePortal.Entity.AssemblyInfoInputs.cache
 D:\VSProgram\ProtalApi\PortalApi\TidePortal.Entity\obj\Debug\netstandard2.0\TidePortal.Entity.AssemblyInfo.cs

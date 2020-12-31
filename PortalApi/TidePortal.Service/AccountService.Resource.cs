@@ -3,27 +3,50 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TidePortal.Entity;
+using TidePortal.Service.Dto;
 
 namespace TidePortal.Service
 {
     public partial class AccountService
     {
-        public IQueryable<Resources> ListResourceAll()
+        public List<ResourceByListDto> ListResourceAll()
         {
-            return _resourcesRepository.ListAll();
+            var res = _resourcesRepository.ListAll();
+            List<ResourceByListDto> list = new List<ResourceByListDto>();
+            foreach (var item in res)
+            {
+                list.Add(ResourceByListDto.ToDto(item));
+            }
+
+            return list;
         }
-        public Resources ListResourceById(int id)
+
+        public ResourceDto ListResourceById(int id)
         {
-            return _resourcesRepository.ListById(id).FirstOrDefault();
+            return ResourceDto.ToDto(_resourcesRepository.ListById(id).FirstOrDefault());
         }
-        public IQueryable<Resources> ListResourcesByIds(IEnumerable<int> ids)
+
+        public List<ResourceByListDto> ListResourcesByIds(IEnumerable<int> ids)
         {
-            return _resourcesRepository.ListAll().Where(m => ids.Contains(m.Id));
+            var res = _resourcesRepository.ListAll().Where(m => ids.Contains(m.Id));
+            List<ResourceByListDto> list = new List<ResourceByListDto>();
+            foreach (var item in res)
+            {
+                list.Add(ResourceByListDto.ToDto(item));
+            }
+            return list;
         }
-        public IQueryable<Resources> ListResourcesByUserId(int id)
+
+        public List<ResourceByListDto> ListResourcesByUserId(int id)
         {
             var ids = GetResourceIdsByUserId(id);
-            return _resourcesRepository.ListAll().Where(m => ids.Contains(m.Id));
+            var res = _resourcesRepository.ListAll().Where(m => ids.Contains(m.Id));
+            List<ResourceByListDto> list = new List<ResourceByListDto>();
+            foreach (var item in res)
+            {
+                list.Add(ResourceByListDto.ToDto(item));
+            }
+            return list;
         }
     }
 }

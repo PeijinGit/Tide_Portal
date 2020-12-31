@@ -16,10 +16,10 @@ namespace TidePortal.Service
         void DeleteUser(int id);
         UserLoginResult ValidateLogin(string qq, string password);
         IQueryable<int> GetResourceIdsByUserId(int userId);
-        IQueryable<Resources> ListResourceAll();
-        Resources ListResourceById(int id);
-        IQueryable<Resources> ListResourcesByIds(IEnumerable<int> ids);
-        IQueryable<Resources> ListResourcesByUserId(int id);
+        List<ResourceByListDto> ListResourceAll();
+        ResourceDto ListResourceById(int id);
+        List<ResourceByListDto> ListResourcesByIds(IEnumerable<int> ids);
+        List<ResourceByListDto> ListResourcesByUserId(int id);
 
     }
 }

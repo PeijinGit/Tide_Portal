@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TidePortal.Api.Options;
 using TidePortal.Core;
 
 namespace TidePortal.Api
@@ -37,6 +38,7 @@ namespace TidePortal.Api
             */
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ItemOptions>();
             //不使用泛型不用typeof
             //services.AddScoped<IAccountService,AccountService>();
 

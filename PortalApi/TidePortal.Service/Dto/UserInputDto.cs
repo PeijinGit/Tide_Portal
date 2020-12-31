@@ -15,6 +15,7 @@ namespace TidePortal.Service.Dto
         public int LoginNum { get; set; }
         public DateTime? LastLoginTime { get; set; }
         public byte Status { get; set; }
+        public string validateCode { get; set; }
 
         public static Users ToUpdateUsers(ref Users user, UserInputDto userInputDto)
         {

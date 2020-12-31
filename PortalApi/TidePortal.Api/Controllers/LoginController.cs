@@ -4,9 +4,12 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using TidePortal.Api.Options;
 using TidePortal.Common.MemoryHelper;
 using TidePortal.Common.ValidateCode;
+using TidePortal.Entity;
 using TidePortal.Service;
+using TidePortal.Service.Dto;
 
 namespace TidePortal.Api.Controllers
 {
@@ -14,7 +17,7 @@ namespace TidePortal.Api.Controllers
     [ApiController]
     public class LoginController : BaseController
     {
-        public LoginController(IAccountService accountService, IConfiguration configuration) : base(accountService, configuration)
+        public LoginController(IAccountService accountService, IConfiguration configuration, ItemOptions itemOptions) : base(accountService, configuration, itemOptions)
         {
         }
 
@@ -34,6 +37,34 @@ namespace TidePortal.Api.Controllers
             }
         }
 
+        public string AddUser(UserInputDto userInputDto) 
+        {
+            string ip = HttpContext.Connection.RemoteIpAddress.ToString();
+            string validateCode = MemoryCacheHelper.GetCache(ip).ToString();
+            if (!string.IsNullOrEmpty(validateCode) && validateCode.ToLower() == userInputDto.validateCode) 
+            {
+                Users user;
+                user = _accountService.GetUserByQQ(userInputDto.QQ);
+                if (user != null)
+                {
+                    HttpContext.Response.StatusCode = 214;
+                    return "hasQQ";
+                }
+                int row = _accountService.CreateAndUpdateUsers(userInputDto);
+                if (row >= 1) return "success";
+                else
+                {
+                    HttpContext.Response.StatusCode = 214;
+                    return "UnknowErr";
+                }
+            }
+            else
+            {
+                HttpContext.Response.StatusCode = 214;
+                return "ValidateErr";
+            }
+        }
+
         public IActionResult GetValidateCode()
         {
             string validateString = ValidateCodeHelper.CreateVaildateString(4);
@@ -42,7 +73,6 @@ namespace TidePortal.Api.Controllers
             MemoryCacheHelper.SetCache(ip, validateString);
             return File(buffer, @"image/png");
         }
-
 
         /// <summary>
         /// 用于图片上传和下载，可以先不看，使用时再看视频

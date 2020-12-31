@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TidePortal.Api.Options;
 using TidePortal.Common.TokenHelper;
 using TidePortal.Entity;
 using TidePortal.Service;
@@ -17,10 +18,13 @@ namespace TidePortal.Api.Controllers
         protected readonly IAccountService _accountService;
         private readonly IConfiguration _configuration;
 
-        public BaseController(IAccountService accountService, IConfiguration configuration)
+        public ItemOptions ItemOptions { get; }
+
+        public BaseController(IAccountService accountService, IConfiguration configuration, ItemOptions itemOptions)
         {
             this._accountService = accountService;
             this._configuration = configuration;
+            this.ItemOptions = itemOptions;
         }
         protected string CheckStatus(string qq, string pwd)
         {
