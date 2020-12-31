@@ -8,6 +8,7 @@ import inner from "@/components/Inner"
 import topBanner from "@/components/TopBanner"
 import axios from "axios"
 import {getAxiosJsonResAsync} from "./lib/GetAxios"
+import qs from "qs"
 
 Vue.config.productionTip = false
 Vue.use(element);
@@ -16,6 +17,7 @@ Vue.component("inner",inner);
 Vue.component("topBanner",topBanner);
 //this.$http.get();
 Vue.prototype.$http = axios;
+Vue.prototype.$qs = qs;
 Vue.prototype.$getJsonResAsync = getAxiosJsonResAsync;
 
 new Vue({

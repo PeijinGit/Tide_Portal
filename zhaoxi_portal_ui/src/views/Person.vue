@@ -102,7 +102,21 @@
 </template>
 <script>
 export default {
-  name: "",
+  data(){
+    return {
+      resource:[],
+    }
+  },
+  mounted() {
+    this.getResourceList();
+  },
+  methods:{
+    getResourceList(){
+      this.$http.get("https://localhost:44385/Resource/GetResourceList").then(res=>{
+        console.log(res.data);
+      })
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

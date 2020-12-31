@@ -10,10 +10,10 @@
             <span>咨询微信：zhaoxi111</span>
           </div>
           <div class="lay-head-top-right">
-            <span class="user-login" @click="showRegisterPad('registerPad')">Register</span>
-            <span class="user-login" @click="showLoginPad('loginPad')">登录</span>
-            <span class="user-login">用户:</span>
-            <span class="user-logout">退出</span>
+            <span class="user-login" v-show="hasToken == null" @click="showRegisterPad('registerPad')">注册</span>
+            <span class="user-login" v-show="hasToken == null" @click="showLoginPad('loginPad')">登录</span>
+            <span class="user-login" v-show="hasToken != null">用户：{{userInfo.nickName}}</span>
+            <span class="user-logout" v-show="hasToken != null" @click="loginOut">退出</span>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@
         </div>
       </div>
     </div>
-    <loginPad id="loginPad" style="display:none"/>
+    <loginPad ref="loginPad" id="loginPad" style="display:none"/>
     <registerPad id="registerPad" style="display:none"/>
   </div>
 </template>
@@ -112,15 +112,33 @@ import registerPad from "./components/RegisterPad.vue";
 export default {
   data(){
     return{
-      selNo:"/"
+      selNo:"/",
+      hasToken: null,
+      userInfo: {}
     }
   },
   mounted(){
+    //localStorage.clear();
     var {name} = this.$route;
     this.selNo = name;
+    this.hasToken = localStorage["zxToken"];
+    this.getUserInfo();
   },
   methods:{
+    getUserInfo() {
+      alert(this.hasToken != null);
+      console.log(localStorage["zxToken"]);
+      if (this.hasToken != null) {
+        this.$http
+          .post("https://localhost:44385/user/getUser", this.$qs.stringify({ token: this.hasToken }))
+          .then(res => {
+            console.log(res.data);
+            this.userInfo = res.data;
+          });
+      }
+    },
     showLoginPad(el){
+      this.$refs.loginPad.changeValidateCode();
       layer.open({
         type:1,
         title:"登录",
@@ -144,6 +162,11 @@ export default {
         content:$("#"+el)
       })
     },
+    loginOut() {
+      localStorage.clear();
+      this.hasToken = null;
+      history.go(0);
+    }
   },
   components:{
     loginPad,
