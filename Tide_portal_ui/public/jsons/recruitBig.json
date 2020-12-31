@@ -1,0 +1,142 @@
+[
+    {
+        "id":1,
+        "img": "/imgs/recruit/join1.jpg",
+        "title":"朝夕讲师招募",
+        "text": "如果你热爱分享，如果你梦想成为老师，加入朝夕教育，践行梦想发挥价值！",
+        "noti":"虚位以待，请邮箱联系：<span style='color:#eb7c06'>hr@ZhaoxiEdu.Net</span>",
+        "items":[
+            {
+                "itemTitle":"你能得到什么",
+                "itemContents":[
+                    {
+                        "content":"高额课酬：拥有高额的课酬费和营销提成，梦想和现实兼顾！"
+                    },
+                    {
+                        "content":"个人品牌：几十万学员粉丝资源，全方位为讲师推广快速打响知名度。"
+                    },
+                    {
+                        "content":"事业成就：不仅是工作，每一位核心讲师都能成为公司股东！"
+                    }
+                ]
+            },
+            {
+                "itemTitle":"我们的优势",
+                "itemContents":[
+                    {
+                        "content":"人脉拓展：每天千人在线听课人数，朝夕教育.Net领域领导品牌。"
+                    },
+                    {
+                        "content":"丰富经验：拥有丰富线上教育经验和完善的课程体系。"
+                    },
+                    {
+                        "content":"口碑形象：优异的服务，过硬的质量，良好的口碑，朝夕老师备受尊敬！"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id":2,
+        "img": "/imgs/recruit/join2.jpg",
+        "title":"朝夕助教招募",
+        "text": "升职加薪，只争朝夕，为学员，也为自己",
+        "noti": "高薪诚聘，请邮箱联系：<span style='color:#eb7c06'>hr@ZhaoxiEdu.Net</span>",
+        "items":[
+            {
+                "itemTitle":"怎么样才是好助教？",
+                "itemContents":[
+                    {
+                        "content":"坚持学员至上，责任感和老师的荣耀感爆棚。"
+                    },
+                    {
+                        "content":"业务敏感，坚持和耐心，拿的了高薪，扛得住压力!"
+                    }
+                ]
+            },
+            {
+                "itemTitle":"薪酬福利",
+                "itemContents":[
+                    {
+                        "content":"提供行业竞争力的无责底薪，高提成高奖励"
+                    },
+                    {
+                        "content":"法定假日，五险一金，给予最实诚的保障"
+                    },
+                    {
+                        "content":"提供完善的新员工培训，晋升通道，每年调薪"
+                    },
+                    {
+                        "content":"每周聚餐每月团建年度全员体检两次旅游"
+                    },
+                    {
+                        "content":"其他福利：节日福利、生日party、开门红利等！"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id":3,
+        "img": "/imgs/recruit/join3.jpg",
+        "title":"朝夕运营推广招募",
+        "text": "从新人到熟练工到团队Leader，充满发展空间！",
+        "noti": "诚聘英才，请邮箱联系：<span style='color:#eb7c06'>hr@ZhaoxiEdu.Net</span>",
+        "items":[
+            {
+                "itemTitle":"运营推广做什么？",
+                "itemContents":[
+                    {
+                        "content":"敏锐互联网嗅觉，自媒体账号管理运营"
+                    },
+                    {
+                        "content":"全网传播课程，找到需要学习的小伙伴儿！"
+                    }
+                ]
+            },
+            {
+                "itemTitle":"薪酬福利",
+                "itemContents":[
+                    {
+                        "content":"提供行业竞争力的无责底薪，高提成高奖励"
+                    },
+                    {
+                        "content":"法定假日，五险一金，给予最实诚的保障"
+                    },
+                    {
+                        "content":"提供完善的新员工培训，晋升通道，每年调薪"
+                    },
+                    {
+                        "content":"每周聚餐每月团建年度全员体检两次旅游"
+                    },
+                    {
+                        "content":"其他福利：节日福利、生日party、开门红利等！"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id":4,
+        "img": "/imgs/recruit/join4.jpg",
+        "title":"HR/猎头合作",
+        "text": "朝夕教育拥有一线城市互联网企业的海量技术精英人才，以及对标大厂需求培养的优秀应届生，现寻求优质企业HR/猎头合作，精准招聘、定向推荐人才。",
+        "noti": "合作请邮件：<span style='color:#eb7c06'>xuyang@ZhaoxiEdu.Net</span>，附合作意向！",
+        "items":[
+            {
+                "itemTitle":"合作形式",
+                "itemContents":[
+                    {
+                        "content":"1.发布企业招聘需求"
+                    },
+                    {
+                        "content":"2.定向推荐技术精英"
+                    },
+                    {
+                        "content":"3.优秀毕业生实习/就业推荐"
+                    }
+                ]
+            }
+        ]
+    }
+]
