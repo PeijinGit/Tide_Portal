@@ -5,7 +5,7 @@ using TidePortal.Entity;
 
 namespace TidePortal.Service.Dto
 {
-    public class ResourceByListDto
+    public class ResourceByListDto:BaseEntityDto
     {
         public string Name { get; set; }
         public string Author { get; set; }
@@ -19,6 +19,7 @@ namespace TidePortal.Service.Dto
         {
             ResourceByListDto dto = new ResourceByListDto()
             {
+                Id = resource.Id,
                 Author = resource.Author,
                 ImageUrl = resource.ImageUrl,
                 LessonUrl = resource.LessonUrl,

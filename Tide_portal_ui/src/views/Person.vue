@@ -9,32 +9,23 @@
       />
       <div class="resource-list">
         <ul>
-          <li>
-            <img src="/imgs/Resource/full-stack-vip.jpg" alt />
-            <div class="course-cover">
+          <li v-for="resource in resourceList" :key="resource.id">
+            <img :src="resource.imageUrl" alt @click="showResource" />
+            <div
+              class="course-cover"
+              @click="clcickCourse(resource)"
+              v-if="showCover(resource.id)"
+            >
               <span class="first-noti cover-noti">
                 <img src="/imgs/icons/lockResource.png" alt />
               </span>
-              <span class="last-noti cover-noti" style="display: none"
-                >点击登录</span
-              >
-              <span class="last-noti cover-noti">需要报名</span>
-              <span class="no-login bottom-noti">未登录</span>
-              <i>全栈班</i>
-            </div>
-          </li>
-          <li>
-            <img src="/imgs/Resource/full-stack-vip.jpg" alt />
-            <div class="course-cover">
-              <span class="first-noti cover-noti">
-                <img src="/imgs/icons/lockResource.png" alt />
-              </span>
-              <span class="last-noti cover-noti" style="display: none"
-                >点击登录</span
-              >
-              <span class="last-noti cover-noti">需要报名</span>
-              <span class="no-login bottom-noti">未登录</span>
-              <i>全栈班</i>
+              <!-- <span class="last-noti cover-noti" v-if="!isLogin"
+                >{{resource.name}}</span
+              > -->
+              <span class="last-noti cover-noti" v-if="!isLogin">点击登录</span>
+              <span class="last-noti cover-noti" v-if="isLogin">需要报名</span>
+              <span class="no-login bottom-noti" v-if="!isLogin">未登录</span>
+              <i>{{ resource.name }}</i>
             </div>
           </li>
         </ul>
@@ -96,27 +87,71 @@
             <p>而未来的征程里，将还有更多的艰难险阻等着你去战胜，去征服!</p>
             <p>请你相信，在你追求、拼搏和苦干的过程中，朝夕教育将永远站在你的身旁!</p>
             </pre>
-      </div> </inner
-    >         
+      </div>
+    </inner>
+    <!-- <resourcePad id="resourcePad" style="display:none"/>          -->
   </div>
 </template>
 <script>
+import resourcePad from "../components/ResourcePad";
 export default {
-  data(){
+  data() {
     return {
-      resource:[],
-    }
+      resourceList: [],
+      resourceIds: [],
+      testList: [],
+      //这里无法获取父类好像是因为data传递的问题
+      isLogin: localStorage["zxToken"] != null,
+      token: localStorage["zxToken"],
+    };
   },
   mounted() {
     this.getResourceList();
+    this.getResourceIds();
   },
-  methods:{
-    getResourceList(){
-      this.$http.get("https://localhost:44385/Resource/GetResourceList").then(res=>{
-        console.log(res.data);
-      })
-    }
-  }
+  methods: {
+    getResourceList() {
+      this.$http
+        .get("https://localhost:44385/Resource/GetResourceList")
+        .then((res) => {
+          this.resourceList = res.data;         
+        });
+    },
+    getResourceIds() {
+      var token = this.token;
+      this.$http
+        .get("https://localhost:44385/Resource/GetResourceId", {
+          params: { token },
+        })
+        .then((res) => {
+          this.resourceIds = res.data;
+          console.log("res " +  res.data);
+           console.log("this.resourceIds "+ typeof( this.resourceIds));
+        });
+    },
+    clickCourse(response) {
+      if (!this.isLogin) {
+        this.$parent.showLoginPad("loginPad");
+      } else {
+        window.open(resource.lessonUrl);
+      }
+    },
+    showResource() {
+      layer.open({
+        type: 1,
+        title: "资源",
+        shadeClose: true,
+        closeBtn: 1, //0代表不显示关闭按钮
+        shade: 0.3,
+        skin: "layui-layer-rim", //加上边框
+        area: ["398px", "352px"],
+        content: $("#resourcePad"),
+      });
+    },
+    showCover(resourceId) {
+      return !this.resourceIds.includes(resourceId);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -224,31 +259,31 @@ export default {
     }
   }
 }
-.write-last{
-    margin-top: 60px;
-    padding-bottom: 60px;
-    pre{
-        font-size: 26px;
-        line-height: 26px;
-        width: 880px;
-        margin: auto;
-        margin-top: 20px;
-        background-color: #fff;
-        padding: 25px;
-        border-radius: 50px;
-        box-sizing: content-box;
-       
-        // span{
-        //     font-size: 60px;
-        //     color:Red;
-        //     position: relative;
-        //     bottom: -15px;
-        // }
-        p:nth-child(1):first-letter{
-            font-size: 60px;
-            color:Red;
-            vertical-align: middle;
-        }
+.write-last {
+  margin-top: 60px;
+  padding-bottom: 60px;
+  pre {
+    font-size: 26px;
+    line-height: 26px;
+    width: 880px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 50px;
+    box-sizing: content-box;
+
+    // span{
+    //     font-size: 60px;
+    //     color:Red;
+    //     position: relative;
+    //     bottom: -15px;
+    // }
+    p:nth-child(1):first-letter {
+      font-size: 60px;
+      color: Red;
+      vertical-align: middle;
     }
+  }
 }
 </style>

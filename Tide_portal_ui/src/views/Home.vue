@@ -27,7 +27,7 @@
         <padTitle mTitle= "加入<span style='color:#eb7c06'>朝夕</span>" sTitle="让每个人的职业生涯不留遗憾"/> 
         <div class="join-us">
           <ul>
-            <li v-for="item in recruitSmall" :key="item.id">
+            <!-- <li v-for="item in recruitSmall" :key="item.id">
               <a href="">
                 <div>
                   <img :src="item.img" alt="">
@@ -35,7 +35,16 @@
                 <p class="recruit-title">{{item.title}}</p>
                 <p class="recruit-text">{{item.text}}</p>
               </a>
-            </li>  
+            </li>   -->
+            <router-link tag="li" :to="'/recruit?recruit='+(index+1)" v-for="(recruit,index) in recruitSmall" :key="recruit.id">
+              <a href>
+                <div>
+                  <img :src="recruit.img" alt />
+                </div>
+                <p class="recruit-title">{{recruit.title}}</p>
+                <p class="recruit-text">{{recruit.text}}</p>
+              </a>
+            </router-link>
           </ul>  
         </div> 
         <padTitle mTitle= "合作<span style='color:#eb7c06'>伙伴</span>" sTitle="人生道路伙伴不可或缺"/> 

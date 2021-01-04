@@ -5,7 +5,7 @@ using TidePortal.Entity;
 
 namespace TidePortal.Service.Dto
 {
-    public class ResourceDto
+    public class ResourceDto: BaseEntityDto
     {
         public string Name { get; set; }
         public string Author { get; set; }
