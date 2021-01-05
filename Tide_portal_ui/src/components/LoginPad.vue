@@ -2,8 +2,8 @@
       
   <div>
     <p>
-      <span v-show="!hasQQ">没有输入QQ号</span>
-      <input id="txtQQ" type="text" name="" v-model="qq" placeholder="请输入QQ" />
+      <span v-show="!hasQQ">No QQ Num</span>
+      <input id="txtQQ" type="text" name="" v-model="qq" placeholder="enter QQ number" />
     </p>
     <p>
       <input
@@ -11,7 +11,7 @@
         type="password"
         name=""
         v-model="password"
-        placeholder="请输入朝夕登录密码"
+        placeholder="Enter Tide password"
       />
     </p>
     <p>
@@ -20,12 +20,12 @@
         type="text"
         name=""
         v-model="validateCode"
-        placeholder="请输入验证码"
+        placeholder="Enter validatecode"
       />
       <img :src="validateCodeUse" alt="验证码" @click="changeValidateCode" />
     </p>
     <p>
-      <button @click="login">登录</button>
+      <button @click="login">Login</button>
     </p>
   </div>
 </template>

@@ -13,6 +13,12 @@ using TidePortal.Service.Dto;
 
 namespace TidePortal.Api.Controllers
 {
+    public class MyUser 
+    {
+        public int QQ { get; set; }
+        public string NickName { get; set; }
+    }
+
     [Route("[controller]/[action]")]
     [ApiController]
     public class LoginController : BaseController
@@ -35,6 +41,18 @@ namespace TidePortal.Api.Controllers
                 HttpContext.Response.StatusCode = 214;
                 return "验证码错误";
             }
+        }
+
+
+        public string AddUserTest(MyUser myuser) 
+        {
+            Console.WriteLine(myuser);
+            return "OK";
+        }
+
+        public void AddUserTestt(int qq, string name)
+        {
+            Console.WriteLine(qq + name);
         }
 
         public string AddUser(UserInputDto userInputDto) 
