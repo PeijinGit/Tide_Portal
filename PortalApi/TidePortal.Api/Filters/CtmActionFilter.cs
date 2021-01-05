@@ -32,7 +32,7 @@ namespace TidePortal.Api.Filters
                 }
                 else 
                 {
-                    context.HttpContext.Response.StatusCode = 214;
+                    context.HttpContext.Response.StatusCode = 215;
                     var jsonResult = new JsonResult(new { isSuccess = "err", content = "timeExp" });
                     context.Result = jsonResult;
                 }

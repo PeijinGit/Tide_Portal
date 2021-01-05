@@ -132,6 +132,12 @@ export default {
         this.$http
           .post("https://localhost:44385/user/getUser", this.$qs.stringify({ token: this.hasToken }))
           .then(res => {
+            if(res.status== 215)
+            {
+              localStorage.clear();
+              this.hasToken = null;
+            }
+
             console.log(res.data);
             this.userInfo = res.data;
           });

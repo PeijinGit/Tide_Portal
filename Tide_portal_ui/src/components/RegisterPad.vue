@@ -1,39 +1,39 @@
 <template>
     <div class="register-page">
         <div class="reg-pad">
-            <div class="warn">用户未填写</div>
+            <div class="warn" v-show="!hasUsername">用户未填写</div>
             <p>
                 <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                <input type="text" name="" id="" placeholder="请输入昵称">
+                <input type="text" name="" id="" v-model="username" placeholder="请输入昵称">
             </p>
-            <div class="warn">手机号码未填写</div>
+            <div class="warn" v-show="!hasPhoneNum">手机号码未填写</div>
             <p>
                 <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
-                <input type="text" name="" id="" placeholder="请输入手机号码">
+                <input type="text" name="" id=""  v-model="phoneNum" placeholder="请输入手机号码">
             </p>
-            <div class="warn">QQ未填写</div>
+            <div class="warn" v-show="!hasQQ">QQ未填写</div>
             <p>
                 <i class="fa fa-qq fa-lg" aria-hidden="true"></i>
-                <input type="text" name="" id="" placeholder="请输入QQ">
+                <input type="text" name="" id="" v-model="QQ" placeholder="请输入QQ">
             </p>
              <div class="warn"></div>
             <p>
                 <i class="fa fa-transgender fa-lg" aria-hidden="true"></i>
-               <select>
+               <select v-model="hasGender">
                    <option value="0">女</option>
                    <option value="1">男</option>
                    <option value="2">其他</option>
                </select>
             </p>
-            <div class="warn">密码未填写</div>
+            <div class="warn"  v-show="!hasPwd">密码未填写</div>
             <p>
                 <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
-                <input type="text" name="" id="" placeholder="请输入昵称">
+                <input type="text" name="" id="" v-model="password" placeholder="请输入昵称">
             </p>
-            <div class="warn">两次密码不一致</div>
+            <div class="warn" v-show="!samePwd">两次密码不一致</div>
             <p>
                 <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
-                <input type="text" name="" id="" placeholder="请输入昵称">
+                <input type="text" name="" id="" v-model="conPassword" placeholder="请输入昵称">
             </p>
             <p>
                 <button>注册</button>
@@ -44,7 +44,21 @@
 
 <script>
     export default {
-        
+        data(){
+            return{
+                hasUsername: true,
+                hasPhoneNum:true,
+                hasQQ: true,
+                hasPwd: true,
+                samePwd: true,
+                username: "",
+                phoneNum: "",
+                QQ: "",
+                hasGender: "",
+                password:"",
+                conPassword:"",
+            }
+        }
     }
 </script>
 
