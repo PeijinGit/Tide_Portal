@@ -88,10 +88,16 @@ export default {
       alert("adding" + this.QQ +" "+this.username);
       var that = this;
       if (this.password == this.conPassword) {
-        this.$http.post(`https://localhost:44385/login/AddUserTestt`, this.$qs.stringify({
-            qq: this.QQ,
-            name: this.username,
-          }))
+        this.$http.post(`https://localhost:44385/login/AddUserTest`, 
+           //this.$qs.stringify (
+            {
+              myuser: {
+                qq: this.QQ,
+                name: this.username,
+              }
+            } 
+          //)
+        )
           .then((res)=>{
           console.log("add user"+res.data);
         });

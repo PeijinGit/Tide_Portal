@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "OmojUTHjoy11TrSqo2Gn3FiwG82mtDRp23irjTQN+O13L4JIQBBlwiEXFdSUsuvmmsYW7jjIsOYkWN8gcR80cA==",
+  "dgSpecHash": "VJ1JTbW5LYlS7ZCfkCK5XsLUnx2fD0jlb5xFJm3beUE/0keaoTNItz4bjmcpea/5FubTf2RS8rXYqO8Fmf/EKw==",
   "success": true,
-  "projectFilePath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Entity\\TidePortal.Entity.csproj",
+  "projectFilePath": "D:\\Program\\_WebProject\\PortalApi\\TidePortal.Entity\\TidePortal.Entity.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\77391\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\77391\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

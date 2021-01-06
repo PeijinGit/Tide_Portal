@@ -130,8 +130,8 @@ export default {
             console.log("has token: "+this.$parent.$data.hasToken); 
             this.resourceIds = [0];
           }
-          console.log("res " +  res.data);
-           console.log("this.resourceIds "+ typeof( this.resourceIds));
+          // console.log("res " +  res.data);
+          // console.log("this.resourceIds "+ typeof( this.resourceIds));
         });
     },
     clickCourse(response) {

@@ -15,8 +15,8 @@ namespace TidePortal.Api.Controllers
 {
     public class MyUser 
     {
-        public int QQ { get; set; }
-        public string NickName { get; set; }
+        public int qq { get; set; }
+        public string name { get; set; }
     }
 
     [Route("[controller]/[action]")]
@@ -44,7 +44,7 @@ namespace TidePortal.Api.Controllers
         }
 
 
-        public string AddUserTest(MyUser myuser) 
+        public string AddUserTest([FromBody]MyUser myuser) 
         {
             Console.WriteLine(myuser);
             return "OK";
