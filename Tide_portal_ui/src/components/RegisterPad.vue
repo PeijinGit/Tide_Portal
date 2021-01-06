@@ -85,18 +85,29 @@ export default {
   },
   methods: {
     registerUer() {
+      if (this.QQ == "") this.hasQQ = false;
+      else this.hasQQ = true;
+      if (this.password == "") this.hasPwd = false;
+      else this.hasPwd = true;
+      if (this.validateCode == "") this.hasValidate = false;
+      else this.hasValidate = true;
+      if (!this.hasQQ || !this.hasPwd || !this.hasValidate) return;
+
+
+
+
       alert("adding" + this.QQ +" "+this.username);
       var that = this;
       if (this.password == this.conPassword) {
         this.$http.post(`https://localhost:44385/login/AddUserTest`, 
-           //this.$qs.stringify (
+           this.$qs.stringify (
             {
-              myuser: {
+               myuser: {
                 qq: this.QQ,
-                name: this.username,
-              }
+                name: this.username+"",
+               }
             } 
-          //)
+          )
         )
           .then((res)=>{
           console.log("add user"+res.data);

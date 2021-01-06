@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Program\\_WebProject\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj": {}
+    "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj": {}
   },
   "projects": {
-    "D:\\Program\\_WebProject\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj": {
+    "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Program\\_WebProject\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj",
+        "projectUniqueName": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj",
         "projectName": "TidePortal.Common",
-        "projectPath": "D:\\Program\\_WebProject\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj",
+        "projectPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\TidePortal.Common.csproj",
         "packagesPath": "C:\\Users\\77391\\.nuget\\packages\\",
-        "outputPath": "D:\\Program\\_WebProject\\PortalApi\\TidePortal.Common\\obj\\",
+        "outputPath": "D:\\VSProgram\\ProtalApi\\PortalApi\\TidePortal.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
@@ -80,7 +80,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

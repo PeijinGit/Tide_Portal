@@ -20,7 +20,7 @@ namespace TidePortal.Api.Controllers
     }
 
     [Route("[controller]/[action]")]
-    [ApiController]
+    //[ApiController]
     public class LoginController : BaseController
     {
         public LoginController(IAccountService accountService, IConfiguration configuration, ItemOptions itemOptions) : base(accountService, configuration, itemOptions)
@@ -43,8 +43,8 @@ namespace TidePortal.Api.Controllers
             }
         }
 
-
-        public string AddUserTest([FromBody]MyUser myuser) 
+        //[HttpPost]
+        public string AddUserTest(MyUser myuser) 
         {
             Console.WriteLine(myuser);
             return "OK";
@@ -150,5 +150,12 @@ namespace TidePortal.Api.Controllers
             }
             return "OK";
         }
+
+        /// Startup function
+        public string StartUpText() 
+        {
+            return "Welcome!!!";
+        }
+
     }
 }
