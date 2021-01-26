@@ -72,39 +72,38 @@ export default {
     return {
       hasUsername: true,
       hasPhoneNum: true,
+      hasGender:true,
       hasQQ: true,
       hasPwd: true,
       samePwd: true,
       username: "",
       phoneNum: "",
       QQ: "",
-      hasGender: "",
+      gender: "",
       password: "",
       conPassword: "",
     };
   },
   methods: {
     registerUer() {
-      if (this.QQ == "") this.hasQQ = false;
-      else this.hasQQ = true;
-      if (this.password == "") this.hasPwd = false;
-      else this.hasPwd = true;
-      if (this.validateCode == "") this.hasValidate = false;
-      else this.hasValidate = true;
-      if (!this.hasQQ || !this.hasPwd || !this.hasValidate) return;
+      // if (this.QQ == "") this.hasQQ = false;
+      // else this.hasQQ = true;
+      // if (this.password == "") this.hasPwd = false;
+      // else this.hasPwd = true;
+      
+      // if (!this.hasQQ || !this.hasPwd || !this.hasValidate) return;
 
-
-
-
-      alert("adding" + this.QQ +" "+this.username);
       var that = this;
-      if (this.password == this.conPassword) {
-        this.$http.post(`https://localhost:44385/login/AddUserTest`, 
+      //if (this.password == this.conPassword) {
+        this.$http.post(`https://localhost:44385/login/AddUser`, 
            this.$qs.stringify (
             {
-               myuser: {
-                qq: this.QQ,
-                name: this.username+"",
+               userInputDto: {
+                NickName: this.username,
+                Mobile: this.phoneNum,
+                QQ: this.QQ,
+                gender: this.gender,
+                PassWord: this.password,
                }
             } 
           )
@@ -112,7 +111,7 @@ export default {
           .then((res)=>{
           console.log("add user"+res.data);
         });
-      }
+      //}
     },
   },
 };
