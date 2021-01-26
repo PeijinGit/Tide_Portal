@@ -15,8 +15,8 @@ namespace TidePortal.Api.Controllers
 {
     public class MyUser 
     {
-        public int qq { get; set; }
-        public string name { get; set; }
+        public int QQ { get; set; }
+        public string NickName { get; set; }
     }
 
     [Route("[controller]/[action]")]
@@ -44,9 +44,9 @@ namespace TidePortal.Api.Controllers
         }
 
         //[HttpPost]
-        public string AddUserTest(MyUser myuser) 
+        public string AddUserTest(MyUser userInputDto) 
         {
-            Console.WriteLine(myuser);
+            Console.WriteLine(userInputDto);
             return "OK";
         }
 
@@ -57,10 +57,13 @@ namespace TidePortal.Api.Controllers
 
         public string AddUser(UserInputDto userInputDto) 
         {
+            userInputDto.RegDate = DateTime.Now;
+            userInputDto.CreateTime = DateTime.Now;
+            userInputDto.LoginNum = 0;
             string ip = HttpContext.Connection.RemoteIpAddress.ToString();
             string validateCode = MemoryCacheHelper.GetCache(ip).ToString();
-            if (!string.IsNullOrEmpty(validateCode) && validateCode.ToLower() == userInputDto.validateCode) 
-            {
+            //if (!string.IsNullOrEmpty(validateCode) && validateCode.ToLower() == userInputDto.validateCode) 
+            //{
                 Users user;
                 user = _accountService.GetUserByQQ(userInputDto.QQ);
                 if (user != null)
@@ -75,12 +78,12 @@ namespace TidePortal.Api.Controllers
                     HttpContext.Response.StatusCode = 214;
                     return "UnknowErr";
                 }
-            }
-            else
-            {
-                HttpContext.Response.StatusCode = 214;
-                return "ValidateErr";
-            }
+            //}
+            //else
+            //{
+            //    HttpContext.Response.StatusCode = 214;
+            //    return "ValidateErr";
+            //}
         }
 
         public IActionResult GetValidateCode()
