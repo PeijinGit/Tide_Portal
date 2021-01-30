@@ -21,7 +21,7 @@ namespace TidePortal.Common.TokenHelper
             //生成dynamic类型
             var tokenData = new { userId, dateTimeExp };
             //对加密数据序列化
-            var tokenOrg = JsonConvert.SerializeObject(tokenData);
+           var tokenOrg = JsonConvert.SerializeObject(tokenData);
             //对Token原始数据进行加密处理
             string token = tokenOrg.Encrypt();
             return token;
